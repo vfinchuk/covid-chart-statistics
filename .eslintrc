@@ -1,0 +1,27 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "semi": "off",
+    "comma-dangle": "off",
+    "require-jsdoc": "off",
+    "linebreak-style": 0,
+    "arrow-parens": "off",
+    "operator-linebreak": "off",
+    "react/prop-types": "off",
+    "no-invalid-this": "off",
+    "no-unused-vars": "off"
+  },
+  "plugins": [
+    "react-hooks"
+  ],
+  "extends": [
+    "google",
+    "eslint:recommended",
+    "plugin:react-hooks/recommended"
+  ]
+}
