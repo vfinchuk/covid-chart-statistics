@@ -57,7 +57,7 @@ const CountryStatistics = ({history, match}) => {
 
   useEffect(() => {
     dispatch(fetchCurrentCountry(DEFAULT_COUNTRY))
-  }, [])
+  }, [dispatch])
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -91,6 +91,7 @@ const CountryStatistics = ({history, match}) => {
           <Grid container className={classes.controlsPanel}>
             <SelectControl
               value={currentCountry}
+              inputProps={currentCountry}
               items={countriesList}
               label={'Countries'}
               handleChange={onCountryChange}
@@ -104,6 +105,7 @@ const CountryStatistics = ({history, match}) => {
             />
             <SelectControl
               value={caseType}
+              inputProps={caseType}
               items={getCaseItems()}
               label={'Cases'}
               handleChange={onCaseChange}

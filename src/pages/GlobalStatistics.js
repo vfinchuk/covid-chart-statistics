@@ -55,10 +55,9 @@ const GlobalStatistics = ({history, match}) => {
 
   const caseType = useSelector(({global}) => global.caseType)
 
-
   useEffect(() => {
     dispatch(fetchGlobalStatistics())
-  }, [])
+  }, [dispatch])
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -107,6 +106,7 @@ const GlobalStatistics = ({history, match}) => {
             />
             <SelectControl
               value={caseType}
+              inputProps={caseType}
               items={getCaseItems()}
               label={'Cases'}
               handleChange={onCaseChange}
